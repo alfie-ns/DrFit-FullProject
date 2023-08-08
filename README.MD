@@ -1,5 +1,9 @@
 # Fitness/AI App Plan
 
+## Commands
+### Mac
+- **Copy entire word**: `Option + Shift + Left/Right Arrow`
+
 ## Backend Development (Django)
 
 ### Environment Setup
