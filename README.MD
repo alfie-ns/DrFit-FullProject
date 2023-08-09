@@ -3,6 +3,7 @@
 ## Commands
 ### Mac
 - **Copy entire word**: `Option + Shift + Left/Right Arrow`
+- **Toggle terminal**: `Control + {backtick}`
 
 ## Backend Development (Django)
 
