@@ -194,69 +194,69 @@ def calculate_calorific_needs(age=None,height=None,weight=None,goal=None,determi
     daily_calorific_needs = int(bmr) * activity_factors[activity_level]
 
 
-    print(f"Users calorific needs before goal factor implementation: {daily_calorific_needs}")
-    # if calorific needs is to low, set it to the minimum BMR required for proper body function
-    if goal == "lose_weight" or goal == "six_pack":
-        print("Entered lose_weight or six_pack goal factor implementation")
-        if determination_level == "casual":
-            print(f"Before applying deficit: {daily_calorific_needs}")
-            daily_calorific_needs *= 0.9  # 10% deficit
-            print(f"After applying deficit: {daily_calorific_needs}")
-            if daily_calorific_needs < lowest_bmr * activity_factors[activity_level]:
-                print("Entered lowest BMR if statement")
-                daily_calorific_needs = lowest_bmr * activity_factors[activity_level]
+    # print(f"Users calorific needs before goal factor implementation: {daily_calorific_needs}")
+    # # if calorific needs is to low, set it to the minimum BMR required for proper body function
+    # if goal == "lose_weight" or goal == "six_pack":
+    #     print("Entered lose_weight or six_pack goal factor implementation")
+    #     if determination_level == "casual":
+    #         print(f"Before applying deficit: {daily_calorific_needs}")
+    #         daily_calorific_needs *= 0.9  # 10% deficit
+    #         print(f"After applying deficit: {daily_calorific_needs}")
+    #         if daily_calorific_needs < lowest_bmr * activity_factors[activity_level]:
+    #             print("Entered lowest BMR if statement")
+    #             daily_calorific_needs = lowest_bmr * activity_factors[activity_level]
 
-        elif determination_level == "determined":
-            print(f"Before applying deficit: {daily_calorific_needs}")
-            daily_calorific_needs *= 0.8  # 20% deficit
-            print(f"After applying deficit: {daily_calorific_needs}")
-            if daily_calorific_needs < lowest_bmr * activity_factors[activity_level]:
-                print("Entered lowest BMR if statement")
-                daily_calorific_needs = lowest_bmr * activity_factors[activity_level]
-                print(f"Daily calorific needs after applying lowest BMR: {daily_calorific_needs}")
+    #     elif determination_level == "determined":
+    #         print(f"Before applying deficit: {daily_calorific_needs}")
+    #         daily_calorific_needs *= 0.8  # 20% deficit
+    #         print(f"After applying deficit: {daily_calorific_needs}")
+    #         if daily_calorific_needs < lowest_bmr * activity_factors[activity_level]:
+    #             print("Entered lowest BMR if statement")
+    #             daily_calorific_needs = lowest_bmr * activity_factors[activity_level]
+    #             print(f"Daily calorific needs after applying lowest BMR: {daily_calorific_needs}")
 
-        elif determination_level == "very_determined":
-            daily_calorific_needs *= 0.7  # 30% deficit
-            if daily_calorific_needs < lowest_bmr * activity_factors[activity_level]:
-                print("Entered lowest BMR if statement")
-                daily_calorific_needs = lowest_bmr * activity_factors[activity_level]
+    #     elif determination_level == "very_determined":
+    #         daily_calorific_needs *= 0.7  # 30% deficit
+    #         if daily_calorific_needs < lowest_bmr * activity_factors[activity_level]:
+    #             print("Entered lowest BMR if statement")
+    #             daily_calorific_needs = lowest_bmr * activity_factors[activity_level]
             
-    # If users goal == "bulk"
-    elif goal == "bulk":
-        print("Entered bulk goal factor implementation")
-        if determination_level == "casual":
-            daily_calorific_needs *= 1.10  # 10% surplus
-        elif determination_level == "determined":
-            daily_calorific_needs *= 1.20  # 20% surplus
-        elif determination_level == "very_determined":
-            daily_calorific_needs *= 1.30  # 30% surplus
+    # # If users goal == "bulk"
+    # elif goal == "bulk":
+    #     print("Entered bulk goal factor implementation")
+    #     if determination_level == "casual":
+    #         daily_calorific_needs *= 1.10  # 10% surplus
+    #     elif determination_level == "determined":
+    #         daily_calorific_needs *= 1.20  # 20% surplus
+    #     elif determination_level == "very_determined":
+    #         daily_calorific_needs *= 1.30  # 30% surplus
 
-    # If users goal == "improve_endurance"
-    elif goal == "improve_endurance":
-        print("Entered improve_endurance goal factor implementation")
-        if determination_level == "casual":
-            daily_calorific_needs *= 1.05  # 5% surplus
-        elif determination_level == "determined":
-            daily_calorific_needs *= 1.10  # 10% surplus
-        elif determination_level == "very_determined":
-            daily_calorific_needs *= 1.15  # 15% surplus
+    # # If users goal == "improve_endurance"
+    # elif goal == "improve_endurance":
+    #     print("Entered improve_endurance goal factor implementation")
+    #     if determination_level == "casual":
+    #         daily_calorific_needs *= 1.05  # 5% surplus
+    #     elif determination_level == "determined":
+    #         daily_calorific_needs *= 1.10  # 10% surplus
+    #     elif determination_level == "very_determined":
+    #         daily_calorific_needs *= 1.15  # 15% surplus
 
-    # If users goal == "improve_flexibility"
-    elif goal == "improve_flexibility":
-        print("Entered improve_flexibility goal factor implementation")
-        # TODO: No major adjustments to calorific intake but should ensure adequate protein for muscle recovery 
-        pass
-    # If users goal == "stress_reduction"
-    elif goal == "stress_reduction":
-        print("Entered stress_reduction goal factor implementation")
-        # TODO: No major adjustments to calorific intake but should ensure a balanced diet for overall mental health 
-        pass
-    # If users goal == "healthy_happiness" or "improve_posture" or "improve_sleep"
-    elif goal == "healthy_happiness" or goal == "improve_posture" or goal == "improve_sleep":
-        print("Entered healthy_happiness, improve_posture or improve_sleep goal factor implementation")
-        # TODO: No adjustments needed as these goals focus on lifestyle habits rather than calorific intake
-        pass 
-    print(f"Users calorific needs after goal factor implementation: {daily_calorific_needs}\n")
+    # # If users goal == "improve_flexibility"
+    # elif goal == "improve_flexibility":
+    #     print("Entered improve_flexibility goal factor implementation")
+    #     # TODO: No major adjustments to calorific intake but should ensure adequate protein for muscle recovery 
+    #     pass
+    # # If users goal == "stress_reduction"
+    # elif goal == "stress_reduction":
+    #     print("Entered stress_reduction goal factor implementation")
+    #     # TODO: No major adjustments to calorific intake but should ensure a balanced diet for overall mental health 
+    #     pass
+    # # If users goal == "healthy_happiness" or "improve_posture" or "improve_sleep"
+    # elif goal == "healthy_happiness" or goal == "improve_posture" or goal == "improve_sleep":
+    #     print("Entered healthy_happiness, improve_posture or improve_sleep goal factor implementation")
+    #     # TODO: No adjustments needed as these goals focus on lifestyle habits rather than calorific intake
+    #     pass 
+    # print(f"Users calorific needs after goal factor implementation: {daily_calorific_needs}\n")
     
     # Round the daily calorific needs to the nearest integer
     daily_calorific_needs = str(round(daily_calorific_needs))
