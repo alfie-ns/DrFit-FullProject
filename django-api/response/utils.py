@@ -313,7 +313,7 @@ calculate_calories_burnt_description = {
 activity_factors = {
         "sedentary": 1.05,
         "lightly_active": 1.15,
-        "moderately_active": 1.38,
+        "moderately_active": 1.40,
         "very_active": 1.55,
         "extra_active": 1.75
     }
