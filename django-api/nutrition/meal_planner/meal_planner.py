@@ -60,6 +60,7 @@ def get_meal_plan(request):
                                              - Goal: {goal}
                                              - Weight: {weight}
                                              - Height: {height}
+                                             - Gender: {gender}
                                              - Age: {age}
                                              - Allergies: {', '.join(allergies)}
                                              - Preferences: {', '.join(preferences)}

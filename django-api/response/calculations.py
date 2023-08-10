@@ -181,9 +181,9 @@ def calculate_calorific_needs(age=None,height=None,weight=None,goal=None,determi
 
     print(f"ENTERED CALCULATE CALORIFIC NEEDS FUNCTION.")
 
-
     # Lowest BMR possible
     lowest_bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5
+    print(f"Lowest BMR possible: {lowest_bmr}")
   
     # If activity level is not in the activity factors dictionary, raise a ValueError
     if activity_level not in activity_factors:
@@ -199,17 +199,24 @@ def calculate_calorific_needs(age=None,height=None,weight=None,goal=None,determi
     if goal == "lose_weight" or goal == "six_pack":
         print("Entered lose_weight or six_pack goal factor implementation")
         if determination_level == "casual":
-            daily_calorific_needs *= 0.90  # 20% deficit
+            print(f"Before applying deficit: {daily_calorific_needs}")
+            daily_calorific_needs *= 0.9  # 10% deficit
+            print(f"After applying deficit: {daily_calorific_needs}")
             if daily_calorific_needs < lowest_bmr * activity_factors[activity_level]:
                 print("Entered lowest BMR if statement")
                 daily_calorific_needs = lowest_bmr * activity_factors[activity_level]
+
         elif determination_level == "determined":
-            daily_calorific_needs *= 0.75  # 30% deficit
+            print(f"Before applying deficit: {daily_calorific_needs}")
+            daily_calorific_needs *= 0.8  # 20% deficit
+            print(f"After applying deficit: {daily_calorific_needs}")
             if daily_calorific_needs < lowest_bmr * activity_factors[activity_level]:
                 print("Entered lowest BMR if statement")
                 daily_calorific_needs = lowest_bmr * activity_factors[activity_level]
+                print(f"Daily calorific needs after applying lowest BMR: {daily_calorific_needs}")
+
         elif determination_level == "very_determined":
-            daily_calorific_needs *= 0.60  # 40% deficit
+            daily_calorific_needs *= 0.7  # 30% deficit
             if daily_calorific_needs < lowest_bmr * activity_factors[activity_level]:
                 print("Entered lowest BMR if statement")
                 daily_calorific_needs = lowest_bmr * activity_factors[activity_level]
