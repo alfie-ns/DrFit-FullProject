@@ -311,11 +311,11 @@ calculate_calories_burnt_description = {
 # DICTIONARIES
 # A dictionary containing activity factors and their corresponding values of which they will be multiplied by the BMR
 activity_factors = {
-        "sedentary": 1.15,
-        "lightly_active": 1.35,
-        "moderately_active": 1.55,
-        "very_active": 1.75,
-        "extra_active": 1.95
+        "sedentary": 1.05,
+        "lightly_active": 1.15,
+        "moderately_active": 1.38,
+        "very_active": 1.55,
+        "extra_active": 1.75
     }
 # A dictionary containing goal descriptions and their corresponding descriptions
 goal_descriptions = {

@@ -11,7 +11,7 @@ from response.calculations import calculate_bmr, calculate_calorific_needs, calc
 # OpenAI API configuation
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
-model="gpt-4"
+model="gpt-3.5-turbo"
 
 # GET_RESPONSE
 def get_response(request):
