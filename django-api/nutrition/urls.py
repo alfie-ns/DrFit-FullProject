@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import GetFoodItem, CreateFoodDiaryEntry, GetCalorieSummary, GetFoodsEaten, GetFoodSearch, ManualCreateFoodDiaryEntry
+from .views import GetFoodItem, CreateFoodDiaryEntry, GetCalorieSummary, GetFoodsEaten, GetFoodSearch, ManualCreateFoodDiaryEntry, GetMealPlan
 
 urlpatterns = [
     path('get_food_item/', GetFoodItem.as_view(), name='get_food_item'),
@@ -8,4 +8,5 @@ urlpatterns = [
     path('get_foods_eaten/', GetFoodsEaten.as_view(), name='get_foods_eaten'),
     path('get_food_search/', GetFoodSearch.as_view(), name='get_food_search'),
     path('manual_create_food_diary_entry/', ManualCreateFoodDiaryEntry.as_view(), name='manual_create_food_diary_entry'),
+    path('get_meal_plan/', GetMealPlan.as_view(), name='get_meal_plan'),
 ]

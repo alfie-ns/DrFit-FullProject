@@ -2,6 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .calorie_diary.calorie_counter import get_food_item, create_food_diary_entry, get_calorie_summary, get_foods_eaten, get_food_search, manual_create_food_diary_entry
+from .meal_planner.meal_planner import get_meal_plan
 import json
 
 class GetFoodItem(APIView):
@@ -49,6 +50,14 @@ class GetFoodSearch(APIView):
 class ManualCreateFoodDiaryEntry(APIView):
     def post(self, request):
         response_data = manual_create_food_diary_entry(request)
+        if 'error' in response_data:
+            return Response({'error': response_data['error']}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response({'response': response_data}, status=status.HTTP_200_OK)
+
+class GetMealPlan(APIView):
+    def post(self, request):
+        response_data = get_meal_plan(request)
         if 'error' in response_data:
             return Response({'error': response_data['error']}, status=status.HTTP_400_BAD_REQUEST)
         else:
