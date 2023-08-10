@@ -10,5 +10,6 @@
 7. - [ ] Debug why entries commited for the next day is not working
 8. - [x] Manual adding entry of food not on the database(get gpt-4 to decide how much calories it is?)
 9. - [x]  Add nutrition to gpt memory
-- 
+
+10. - [ ] Prompt engineer the gpt to respond with meal plans for the day or week based on the user's calorie goal, as well as the main goal(taking into consideration 1g of protein per pound to maintain muscle mass in calorie deficit)(achieving macros) 
 

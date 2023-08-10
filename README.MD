@@ -1,5 +1,12 @@
 # Fitness/AI App Plan
 
+## Overview
+This is a plan for a fitness app that uses AI to provide personalized workout plans and nutrition guidance. The app will also include features for tracking workouts and meals, a virtual fitness coach, educational resources, and social challenges.
+
+## Diary
+
+1. - [ ] Create meal plans based on user's calorie goal, as well as the main goal(taking into consideration 1g of protein per pound to maintain muscle mass in calorie deficit)(achieving macros)
+
 ## ChatGPT Ideas
 1. Personalized Workout Plans & Nutrition Guidance: Tailored workout routines and meal plans based on individual goals and preferences.
 
