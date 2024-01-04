@@ -69,7 +69,7 @@ def get_personalised_transcript(request):
     summary = []
     for i, chunk in enumerate(chunks):
         res = openai.ChatCompletion.create(
-            model = "gpt-4",
+            model = "gpt-4-1106-preview",
             messages = [
                 {"role": "system", "content": f"Start of loop {i+1}"},
                 {"role": "system", "content": f"""
@@ -96,7 +96,7 @@ def get_personalised_transcript(request):
         summary_text = "\n".join(summary)
     
     res2 = openai.ChatCompletion.create(
-        model = "gpt-4",
+        model = "gpt-4-1106-preview",
         messages = [
             {"role": "system", "content": f"""Your task is now to summarize all the relevant pieces
                                               of information you have found in a single response.

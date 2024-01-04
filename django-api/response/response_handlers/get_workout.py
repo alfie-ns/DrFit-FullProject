@@ -12,7 +12,7 @@ import http.client
 # OpenAI API configuation
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
-model="gpt-3.5-turbo-16k"
+model="gpt-4-1106-preview"
 
 #GET_EXERCISE
 def get_exercises():

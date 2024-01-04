@@ -11,7 +11,7 @@ from response.calculations import calculate_bmr, calculate_calorific_needs, calc
 # OpenAI API configuation
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
-model="gpt-3.5-turbo"
+model="gpt-4-1106-preview"
 
 # GET_RESPONSE
 def get_response(request):
@@ -110,7 +110,7 @@ def get_response(request):
         function_response = function_to_call(**function_arguments) #Unpack the arguments and call the function
         print("ENTERING RES_2")
         res_2 = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-4-1106-preview",
             messages=[
                     {"role": "system", "content": general_prompt},
                     {"role": "system", "content": f"User's Details: ({str(user_profile_str)})"},

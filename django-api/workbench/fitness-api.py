@@ -20,7 +20,7 @@ def get_exercises():
 def get_workout():
     # Set OpenAI API configuration
     openai.api_key = os.getenv('OPENAI_API_KEY')
-    model="gpt-3.5-turbo"
+    model="gpt-4-1106-preview"
 
     # Get all exercises from external API
     all_exercises = get_exercises()

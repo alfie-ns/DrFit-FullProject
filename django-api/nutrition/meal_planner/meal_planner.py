@@ -10,7 +10,7 @@ import json, os, openai, time
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
-model = "gpt-3.5-turbo"
+model = "gpt-4-1106-preview"
 
 def get_meal_plan(request):
 

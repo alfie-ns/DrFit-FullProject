@@ -178,7 +178,7 @@ def manual_create_food_diary_entry(request):
             print("No calories provided, using AI model to get calories")
             size = data.get('size') # In grams
             res = openai.ChatCompletion.create(
-                model = "gpt-4",
+                model = "gpt-4-1106-preview",
                 messages = [
                     {"role": "system", "content": f"""You are going to make an accurate conclusion about the calories of {food_item_name} which is 
                                                       the size of {size} grams, just respond only with the number of calories in your response."""},

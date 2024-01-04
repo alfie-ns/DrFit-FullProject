@@ -12,7 +12,7 @@ from response.models import Conversation
 # OpenAI API configuation
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
-model="gpt-4"
+model="gpt-4-1106-preview"
 
 # Get initial plan function
 def get_initial_plan(user_profile):
@@ -120,7 +120,7 @@ def get_initial_plan(user_profile):
    start_time_initial = time.time()
 
    res = openai.ChatCompletion.create(
-      model='gpt-3.5-turbo',
+      model=model,
       messages=[{'role': 'user', 'content': initial_stepbystep}]
    )
    response = res['choices'][0]['message']['content']

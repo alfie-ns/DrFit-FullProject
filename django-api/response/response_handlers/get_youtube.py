@@ -10,7 +10,7 @@ import os, openai, json, time
 # OpenAI API configuation
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
-model="gpt-4"
+model="gpt-4-1106-preview"
 
 def get_youtube(request):
     print("ENTERED GET_YOUTUBE FUNCTION")
@@ -81,7 +81,7 @@ def get_youtube(request):
     summary = []
     for i, chunk in enumerate(chunks):
         res = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo-16k",
+            model="gpt-4-1106-preview",
             messages=[
                 {"role": "system", "content": """You are a very knowledgeable doctor. You have been tasked with interpreting 
                                                  and summarizing a YouTube video and extracting summarized insights from each chunk  it."""},
@@ -103,7 +103,7 @@ def get_youtube(request):
     # Start the second timer
     start_time2 = time.time()
     final_res = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4-1106-preview",
         messages=[
             {"role": "system", "content": f"""
                 You are ChatGPT, an AI developed by OpenAI. You are given many insights and must generate a list of {insight_count} insights. 
