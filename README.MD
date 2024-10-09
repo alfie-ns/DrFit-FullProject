@@ -1,5 +1,10 @@
 # Fitness/AI App Plan
 
+
+## Matt notes
+
+- [ ] LINK TO APPLE HEALTH: We looked at the software development job at TPP.  They are looking at creating a clinical or healthcare iOS app that links with apple healthcare.  Can you find a way of linking your fitness app to apple healthcare, as this would be a requirement of the role?  https://tpp-careers.com/roles/summer-internship-2025-software-developer/
+
 ## Overview
 
 This is a plan for a fitness app that uses AI to provide personalized workout plans and nutrition guidance. The app will also include features for tracking workouts and meals, a virtual fitness coach, educational resources, and social challenges.
